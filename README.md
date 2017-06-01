@@ -21,7 +21,7 @@ ZKProofMark.prove_b64(
   "Diane, I’m holding in my hand a small box of chocolate bunnies.",
   "Owls are not that they seem")
 ```
-You can then post the result, together with the message. Note that the text of message is necessary for proof to work. Also note that whitespace is significant.
+You can then post the result, together with the message. Note that the text of message is necessary for proof to work.
 ```
 I’d like to brush my teeth.
 AAAAICBaJzQDO99fONnz1SBBWltzY60ecFPod1piSFK3jmbT::
@@ -39,6 +39,6 @@ r3adxoWPkiru1DOJYPPfEB26eqVFno6x", "I’d like to brush my teeth.",
 "Diane, I’m holding in my hand a small box of chocolate bunnies.",
 "AAAAJh/xkpcVl79B0MOnBQ+sR+04bk3bb8O3+q4dRCo+FnXrJa1XMr2Q")
 ```
-Without `_b64` postfix, all methods return (or, in case of `check`, expect) OpenSSL::BN bignums. Base64 versions are just for convenience of storage.
+Note that whitespace is significant for messages text, but not for Base64-encoded numbers. Without `_b64` postfix, all methods return (or, in case of `check`, expect) OpenSSL::BN bignums. Base64 versions are just for convenience of storage.
 
 You can set salt before operations with `salt =` setter; it is useful if you, for instance, writing an application and want a signature for given message and private key to be different from signature from same message and key in any other application. Proof, on the other hand, is based on a random value and is always come out different, even for same input values.
