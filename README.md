@@ -1,7 +1,7 @@
 An implementation of zero-knowledge proof, non-interactive version
 based on [NARWHAL](http://ojs.pythonpapers.org/index.php/tppm/article/download/155/142) implementation of Brandon Lum Jia Jun’s [ZKA_wzk](https://courses.csail.mit.edu/6.857/2014/files/15-cheu-jaffe-lin-yang-zkp-authentication.pdf) auth protocol.
 
-== Usage:
+## Usage:
 
 Suppose you’re using an anonymous channel and want ephemeral sort of identity. `signature_b64` method let you sign you post using a private key, or password, in this example, “Owls are not they seem”: 
 ```
@@ -41,4 +41,4 @@ r3adxoWPkiru1DOJYPPfEB26eqVFno6x", "I’d like to brush my teeth.",
 ```
 Without `_b64` postfix, all methods return (or, in case of `check`, expect) OpenSSL::BN bignums. Base64 versions are just for convenience of storage.
 
-You can set salt before operations; it is useful if you, for instance, writing an application and want a signature for given message and private key to be different from signature from same message and key in any other application. Proof, on the other hand, is based on a random value and is always come out different, even for same input values.
+You can set salt before operations with `salt =` setter; it is useful if you, for instance, writing an application and want a signature for given message and private key to be different from signature from same message and key in any other application. Proof, on the other hand, is based on a random value and is always come out different, even for same input values.
