@@ -1,4 +1,4 @@
-An implementation of zero-knowledge proof, non-interactive version
+Non-interactive version of zero-knowledge proof protocol for purposes of minimalistic identity, 
 based on [NARWHAL](http://ojs.pythonpapers.org/index.php/tppm/article/download/155/142) implementation of Brandon Lum Jia Jun’s [ZKA_wzk](https://courses.csail.mit.edu/6.857/2014/files/15-cheu-jaffe-lin-yang-zkp-authentication.pdf) auth protocol.
 
 ## Usage:
