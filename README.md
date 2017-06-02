@@ -4,7 +4,7 @@ based on [NARWHAL](http://ojs.pythonpapers.org/index.php/tppm/article/download/1
 ## Usage:
 
 Suppose you’re using an anonymous channel and want ephemeral sort of identity. `signature_b64` method let you sign you post using a private key, or password, in this example, “Owls are not they seem”: 
-ruby```
+```ruby
 ZKProofMark.signature_b64(
   "Diane, I’m holding in my hand a small box of chocolate bunnies.",
   "Owls are not that they seem")
@@ -15,7 +15,7 @@ Diane, I’m holding in my hand a small box of chocolate bunnies.
 AAAAJh/xkpcVl79B0MOnBQ+sR+04bk3bb8O3+q4dRCo+FnXrJa1XMr2Q
 ```
 This signature by itself reveals nothing. But after that, you can create a proof that it is you (or at least a person who knows the same private key) created this post, with another message:
-```
+```ruby
 ZKProofMark.prove_b64(
   "I’d like to brush my teeth.",
   "Diane, I’m holding in my hand a small box of chocolate bunnies.",
@@ -31,7 +31,7 @@ r3adxoWPkiru1DOJYPPfEB26eqVFno6x
 ```
 Anyone having the access to these two messages can prove that they are created with the same private key:
 
-```
+```ruby
 ZKProofMark.check_b64(
 "AAAAICBaJzQDO99fONnz1SBBWltzY60ecFPod1piSFK3jmbT::
 AAAAQQDmV0w44uH2K7IAdjl4w4U9iI8GC0xde3W9aMQ4HAim0UYXQoIir0Ot
